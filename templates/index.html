@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Счётчик посещений</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+</head>
+<body>
+    <h1>Счётчик посещений в реальном времени</h1>
+    <p>Количество посещений: <span id="visit-count">0</span></p>
+
+    <script>
+        const socket = io();
+
+        // Обновление счётчика при получении сообщения
+        socket.on('update_count', function(data) {
+            document.getElementById('visit-count').innerText = data.count;
+        });
+    </script>
+</body>
+</html>

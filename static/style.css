@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+#visit-count {
+    font-size: 2em;
+    font-weight: bold;
+    color: #FF5722;
+}
